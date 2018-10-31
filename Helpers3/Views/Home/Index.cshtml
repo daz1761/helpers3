@@ -1,0 +1,19 @@
+﻿@model Helpers3.Models.CitiesViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="font-family: Arial">
+
+    <h2>Index</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ListBoxFor(x => x.SelectedCities, Model.Cities, new { size = 6 })
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+    }
+
+</div>
